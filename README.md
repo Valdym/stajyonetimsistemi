@@ -1,3 +1,3 @@
 # stajyonetimsistemi
 
-Veritabanı yönetimi dersinde verilen dönem ödevi kapsamında bir Staj Yönetim Sistemi geliştirilmesi.
+Veritabanı yönetimi dersinde(BIL 3011) verilen dönem ödevi kapsamında bir Staj Yönetim Sistemi geliştirilmesi.
