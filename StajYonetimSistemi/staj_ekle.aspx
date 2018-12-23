@@ -19,11 +19,11 @@
         <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 100px"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label4" runat="server" Text="Başlangıç Tarihi"></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Başlangıç Tarihi(AA/GG/YY)"></asp:Label>
         <asp:TextBox ID="TextBox3" runat="server" style="margin-left: 37px"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label5" runat="server" Text="Bitiş Tarihi"></asp:Label>
+        <asp:Label ID="Label5" runat="server" Text="Bitiş Tarihi(AA/GG/YY)"></asp:Label>
         <asp:TextBox ID="TextBox4" runat="server" style="margin-left: 68px"></asp:TextBox>
         <br />
         <br />

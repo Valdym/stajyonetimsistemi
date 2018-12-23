@@ -16,16 +16,15 @@ namespace StajYonetimSistemi
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=staj;Integrated Security=True");
+            SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYönetimSistemi;Integrated Security=True");
             baglan.Open();
+            SqlCommand komut = new SqlCommand("Select * From akademisyen_tablo where KullaniciAdi ='" + TextBox1.Text + "' and Sifre ='" + TextBox2.Text + "'", baglan);
 
-            SqlCommand komut = new SqlCommand("Select * From akademisyen where KullaniciAdi ='" + TextBox1+ "' and Sifre ='" + TextBox2.Text + "'", baglan);
             SqlDataReader oku = komut.ExecuteReader();
 
             if (oku.Read())
             {
-                // Session["KullaniciAdi"] = oku["KullaniciAdi"].ToString();
-                Response.Redirect("webform.aspx");
+                Response.Redirect("masterPage.aspx");
             }
             else
             {

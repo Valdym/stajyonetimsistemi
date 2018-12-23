@@ -28,9 +28,9 @@
     <title>StajYönetimSistemi</title>
 
     <link href="/styleSheet.css" rel="stylesheet" />
-    
      
 </head>
+
 <body>
     <form id="form1" runat="server">
         
@@ -57,22 +57,22 @@
               </div>
        
         </div>
-<%--             <div id="box">--%>
+         
                    <div align="center">
                             <div class="w3-panel w3-padding-16">
-                                  <asp:Button ID="Button3" runat="server" Text="Öğrenci eklemek için tıklayınız." Width="350px" OnClick="Button1_Click" CssClass="login100-form-btn"/>
+                                  <asp:Button ID="Button3" runat="server" Text="Öğrenci eklemek için tıklayınız." Width="400px" OnClick="Button1_Click" CssClass="login100-form-btn"/>
                             </div>
                             <div class="w3-panel w3-padding-16">
-                                  <asp:Button ID="Button1" runat="server"  Text="Staj eklemek için tıklayınız." Width="350px" OnClick="Button2_Click" CssClass="login100-form-btn" />
+                                  <asp:Button ID="Button1" runat="server"  Text="Staj eklemek için tıklayınız." Width="400px" OnClick="Button2_Click" CssClass="login100-form-btn" />
                             </div>
                             <div class="w3-panel w3-padding-16">
-                                  <asp:Button ID="Button2" runat="server"  Text="Mülakat eklemek için tıklayınız" Width="350px" OnClick="Button3_Click" CssClass="login100-form-btn" />
+                                  <asp:Button ID="Button2" runat="server"  Text="Mülakat eklemek için tıklayınız" Width="400px" OnClick="Button3_Click" CssClass="login100-form-btn" />
                             </div>
                             <div class="w3-panel w3-padding-16">
-                                  <asp:Button ID="Button4" runat="server"  Text="Mülakatları görüntülemek için tıklayınız." Width="350px" OnClick="Button4_Click" CssClass="login100-form-btn" />
+                                  <asp:Button ID="Button4" runat="server"  Text="Staj sonuçlarını görüntülemek için tıklayınız." Width="400px" OnClick="Button4_Click" CssClass="login100-form-btn" />
                             </div>
                     </div>
-<%--            </div>--%>
+       
              <div align ="center">
                  <div class="w3-panel w3-padding-48">
                            <asp:Button ID="Button5" runat="server"  Text="Çıkış" Width="150px" OnClick="Button5_Click" CssClass="login100-form-btn" />

@@ -1,9 +1,4 @@
 ﻿
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" > 
-
-
-
 body {
     background-color: #ffffff;
 }
@@ -37,7 +32,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: ##aca4a4;
+    background: #aca4a4;
     background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
     background: -o-linear-gradient(bottom, #005bea, #00c6fb);
     background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
