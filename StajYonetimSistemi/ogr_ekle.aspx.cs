@@ -26,10 +26,10 @@ namespace StajYonetimSistemi
             ogrsad = TextBox3.Text;
             ogrsb = TextBox4.Text;
             ogrtur = TextBox5.Text;
-            SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYonetimSistemi;Integrated Security=True ");
-            baglan.Open();
+            SqlConnection baglan2 = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYonetimSistemi;Integrated Security=True ");
+            baglan2.Open();
 
-            SqlCommand kayit = new SqlCommand("insert into ogr_tablo(ogr_no,ad,soyad,sinif_bilgi,ogr_turu) values(@ogr_no,@ad,@soyad,@sinif_bilgi,@ogr_turu)", baglan);
+            SqlCommand kayit = new SqlCommand("insert into ogr_tablo(ogr_no,ad,soyad,sinif_bilgi,ogr_turu) values(@ogr_no,@ad,@soyad,@sinif_bilgi,@ogr_turu)", baglan2);
             kayit.Parameters.AddWithValue("@ogr_no", ogrno);
             kayit.Parameters.AddWithValue("@ad", ograd);
             kayit.Parameters.AddWithValue("@soyad", ogrsad);
@@ -37,7 +37,7 @@ namespace StajYonetimSistemi
             kayit.Parameters.AddWithValue("@ogr_turu", ogrtur);
 
             kayit.ExecuteNonQuery();
-            baglan.Close();
+            baglan2.Close();
         }
 
         protected void ögretimTuru_SelectedIndexChanged(object sender, EventArgs e)

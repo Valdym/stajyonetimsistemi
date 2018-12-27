@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-
 namespace StajYonetimSistemi
 {
     public partial class mulakat_ekle : System.Web.UI.Page
@@ -13,9 +12,8 @@ namespace StajYonetimSistemi
         double puanlar;
         double kabul_edilen_gun;
         string sid;
-        string sid2;
         string top_gun;
-        string top_gun2;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -37,12 +35,11 @@ namespace StajYonetimSistemi
             string mtarih = TextBox10.Text;
             string staj_id = TextBox11.Text;
 
-            SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=staj;Integrated Security=True");
+            SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYönetimSistemi;Integrated Security=True");
             baglan.Open();
 
             SqlCommand veri = new SqlCommand("Select * From staj_tablo", baglan);
             SqlCommand kayit = new SqlCommand("insert into mulakat_tablo(devam,caba,vakit,amir,is_arkadas,proje,duzen,sunum,icerik,mulakat,mulakat_saat,mulakat_tarih,staj_id) values(@devam,@caba,@vakit,@amir,@isark,@proje,@duzen,@sunum,@icerik,@mulakat,@msaat,@mtarih,@sid)", baglan);
-            SqlCommand stj = new SqlCommand("insert into staj_tablo(kabul_gun) values(@kabul)", baglan);
             SqlDataReader dr;
             dr = veri.ExecuteReader();
             while (dr.Read())
@@ -61,7 +58,9 @@ namespace StajYonetimSistemi
                                Convert.ToDouble(TextBox9.Text) * 0.4;
             kabul_edilen_gun = puanlar * Convert.ToDouble(top_gun) / 100;
 
-            stj.Parameters.AddWithValue("@kabul", kabul_edilen_gun);
+
+            SqlCommand stj = new SqlCommand("Update staj_tablo SET total_gun = @kbl WHERE staj_id =  '" + TextBox11.Text + "'", baglan);
+            stj.Parameters.AddWithValue("@kbl", kabul_edilen_gun);
             kayit.Parameters.AddWithValue("@devam", devam);
             kayit.Parameters.AddWithValue("@caba", caba);
             kayit.Parameters.AddWithValue("@vakit", vakit);
@@ -76,6 +75,7 @@ namespace StajYonetimSistemi
             kayit.Parameters.AddWithValue("@mtarih", mtarih);
             kayit.Parameters.AddWithValue("@sid", staj_id);
 
+            stj.ExecuteNonQuery();
             kayit.ExecuteNonQuery();
             baglan.Close();
         }

@@ -49,7 +49,7 @@
 
 					 </span>
 
-					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
 						     Kullanıcı Adı<asp:TextBox ID="TextBox1" runat="server" CssClass="input100"></asp:TextBox>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
