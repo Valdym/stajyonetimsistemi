@@ -26,7 +26,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
     <title>StajYönetimSistemi</title>
-
+    <style>
+                html, body,h1{
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+     </style>
     <link href="/styleSheet.css" rel="stylesheet" />
      
 </head>

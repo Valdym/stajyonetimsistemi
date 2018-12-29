@@ -28,6 +28,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
     <title>KTU CENG</title>
+    <style>
+                html, body,h1{
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+     </style>
 </head>
 <body>
      <form id="form1" runat="server">

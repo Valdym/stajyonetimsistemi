@@ -24,7 +24,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
+    <style>
+                html, body,h1{
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+     </style>
 </head>
 <body>
     <form id="form1" runat="server">

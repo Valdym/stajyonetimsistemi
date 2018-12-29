@@ -35,7 +35,8 @@
 <body>
     <form id="form1" runat="server">
             <div class="container-login100" style="background-image: url('images/karadeniz.jpg');">    
-                
+           <div class="wrap-login100 p-t-190 p-b-30">
+            
         <div class="w3-panel w3-round-xxlarge ">
 
               <div align="center">
@@ -47,14 +48,14 @@
                  </div>
               </div>
        
-        
+        </div>
 
 
     <div align="center">
                 
-                <div class="w3-panel w3-padding-24">
-                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı Adı Gereklidir">
-						    <asp:Label ID="Label1" runat="server" Text="Devam" ></asp:Label>
+                <div class="w3-panel w3-padding-8">
+                    <div class="wrap-input100 validate-input m-b-10">
+						    <h4><asp:Label ID="Label1" runat="server" Text="Devam" CssClass="w3-hover-text-amber" ></asp:Label></h4>
                             <asp:TextBox ID="TextBox1" runat="server" CssClass="input100" ></asp:TextBox>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -63,9 +64,9 @@
 					</div>            
                 </div>
 
-               <div class="w3-panel w3-padding-24">
-                   <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                            <asp:Label ID="Label2" runat="server" Text="Çaba ve Çalışma" ></asp:Label>
+               <div class="w3-panel w3-padding-8">
+                   <div class="wrap-input100 validate-input m-b-10" >
+                           <h4> <asp:Label ID="Label2" runat="server" Text="Çaba ve Çalışma" CssClass="w3-hover-text-amber" ></asp:Label></h4>
                                  <asp:TextBox ID="TextBox2" runat="server" CssClass="input100"></asp:TextBox>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -77,9 +78,9 @@
 
                 </div>
 
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label3" runat="server" Text="İşi Vaktinde Yapma"></asp:Label>
+                      <h4>  <asp:Label ID="Label3" runat="server" Text="İşi Vaktinde Yapma" CssClass="w3-hover-text-amber"></asp:Label></h4>
                          <asp:TextBox ID="TextBox3" runat="server" CssClass="input100"></asp:TextBox>					
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -89,9 +90,9 @@
                 </div>
 
 
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label4" runat="server" Text="Amirine Karşı Davranış"></asp:Label>
+                        <h4> <asp:Label ID="Label4" runat="server" Text="Amirine Karşı Davranış"></asp:Label></h4>
                          <asp:TextBox ID="TextBox4" runat="server" CssClass="input100"></asp:TextBox>				
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -99,9 +100,9 @@
 						</span>
 					</div>
                 </div>  
-               <div class="w3-panel w3-padding-24">
+               <div class="w3-panel w3-padding-8">
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label5" runat="server" Text="İş Arkadaşlarına Karşı Davranış"></asp:Label>
+                         <h4><asp:Label ID="Label5" runat="server" Text="İş Arkadaşlarına Karşı Davranış" CssClass="w3-hover-text-amber"></asp:Label></h4>
                          <asp:TextBox ID="TextBox5" runat="server" CssClass="input100"></asp:TextBox>				
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -109,9 +110,9 @@
 						</span>                  
                         </div>
                 </div>
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label6" runat="server" Text="Proje"></asp:Label>
+                       <h4>  <asp:Label ID="Label6" runat="server" Text="Proje" CssClass="w3-hover-text-amber"></asp:Label></h4>
                          <asp:TextBox ID="TextBox6" runat="server" CssClass="input100" ></asp:TextBox>	
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -120,9 +121,9 @@
                         </div>
                     
                 </div>
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label7" runat="server" Text="Düzen"></asp:Label>
+                       <h4> <asp:Label ID="Label7" runat="server" Text="Düzen" CssClass="w3-hover-text-amber"></asp:Label></h4> 
                          <asp:TextBox ID="TextBox7" runat="server" CssClass="input100" ></asp:TextBox>	
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -131,9 +132,9 @@
                         </div>       
                 </div>
 
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label8" runat="server" Text="Sunum"></asp:Label>
+                       <h4>  <asp:Label ID="Label8" runat="server" Text="Sunum" CssClass="w3-hover-text-amber"></asp:Label></h4>
                          <asp:TextBox ID="TextBox8" runat="server" CssClass="input100" ></asp:TextBox>	
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -141,9 +142,9 @@
 						</span>                  
                         </div>
                 </div>
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label13" runat="server" Text="İçerik"></asp:Label>
+                      <h4>   <asp:Label ID="Label13" runat="server" Text="İçerik" CssClass="w3-hover-text-amber"></asp:Label> </h4>
                          <asp:TextBox ID="TextBox14" runat="server" CssClass="input100" ></asp:TextBox>
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -152,9 +153,9 @@
                         </div>
                     
                 </div>
-                <div class="w3-panel w3-padding-24">
-                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label9" runat="server" Text="Mülakat"></asp:Label>
+                <div class="w3-panel w3-padding-8">
+                    <div class="wrap-input100 validate-input m-b-10" >
+                        <h4> <asp:Label ID="Label9" runat="server" Text="Mülakat" CssClass="w3-hover-text-amber"></asp:Label></h4>
                          <asp:TextBox ID="TextBox9" runat="server" CssClass="input100" ></asp:TextBox>
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -164,9 +165,9 @@
                 </div>
                 
 
-                <div class="w3-panel w3-padding-24">
-                <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                         <asp:Label ID="Label12" runat="server" Text="Mülakat Saati(SS:DD)"></asp:Label>
+                <div class="w3-panel w3-padding-8">
+                <div class="wrap-input100 validate-input m-b-10">
+                        <h4> <asp:Label ID="Label12" runat="server" Text="Mülakat Saati(SS:DD)" CssClass="w3-hover-text-amber"></asp:Label></h4>
                          <asp:TextBox ID="TextBox13" runat="server" CssClass="input100" ></asp:TextBox>
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -175,9 +176,9 @@
                         </div>
                 </div>
 
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                        <asp:Label ID="Label10" runat="server" Text="Mülakat Tarihi(GG-AA-YY)"></asp:Label>
+                      <h4>  <asp:Label ID="Label10" runat="server" Text="Mülakat Tarihi(GG-AA-YY)" CssClass="w3-hover-text-amber"></asp:Label></h4>
                         <asp:TextBox ID="TextBox10" runat="server" CssClass="input100" ></asp:TextBox>
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -186,9 +187,9 @@
                         </div> 
                 </div>
 
-                <div class="w3-panel w3-padding-24">
-                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Kullanıcı adı gereklidir.">
-                        <asp:Label ID="Label11" runat="server" Text="Staj ID"></asp:Label>
+                <div class="w3-panel w3-padding-8">
+                    <div class="wrap-input100 validate-input m-b-5" data-validate = "Kullanıcı adı gereklidir.">
+                      <h4>  <asp:Label ID="Label11" runat="server" Text="Staj ID" CssClass="w3-hover-text-amber"></asp:Label></h4>
                         <asp:TextBox ID="TextBox11" runat="server" CssClass="input100" ></asp:TextBox>
                         <span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -197,11 +198,11 @@
                         </div> 
                 </div>
 
-                <div class="w3-panel w3-padding-24">
+                <div class="w3-panel w3-padding-8">
 
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Ekle" Width="137px" CssClass="login100-form-btn" />
                 </div>
-               
+        </div>       
         </div>
         </div>
     </form>

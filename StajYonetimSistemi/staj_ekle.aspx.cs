@@ -12,6 +12,8 @@ namespace StajYonetimSistemi
 {
     public partial class staj_ekle : System.Web.UI.Page
     {
+        string staj_konu;
+        SqlCommand cmd;
         string ogr_num;
         string ogr_num2;
         string stj_konu;
@@ -26,6 +28,7 @@ namespace StajYonetimSistemi
             string kurum_adi = TextBox1.Text;
             string sehir = TextBox2.Text;
             string bas_tar = TextBox3.Text;
+
             string bit_tar = TextBox4.Text;
             string top_gun = TextBox5.Text;
             string staj_konu = TextBox6.Text;
@@ -40,10 +43,10 @@ namespace StajYonetimSistemi
             }
             else
             {
-                SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=staj;Integrated Security=True");
+                SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYönetimSistemi;Integrated Security=True");
                 baglan.Open();
 
-                SqlCommand kayit = new SqlCommand("insert into staj_tablo(kurumAdi,sehir,bas_tarih,bit_tarih,total_gun,staj_konu,ogr_no) values(@kurumAdi,@sehir,@bas_tarih,@bit_tarih,@total_gun,@staj_konu,@ogr_no)", baglan);
+                SqlCommand kayit = new SqlCommand("insert into staj_tablo(kurumAdi,sehir,bas_tarih,bit_tarih,total_gun,staj_konusu,ogr_no) values(@kurumAdi,@sehir,@bas_tarih,@bit_tarih,@total_gun,@staj_konusu,@ogr_no)", baglan);
                 SqlCommand sinif = new SqlCommand("Select * From ogr_tablo where sinif_bilgi < 3 ", baglan);
                 SqlDataReader dr;
                 dr = sinif.ExecuteReader();
@@ -71,7 +74,7 @@ namespace StajYonetimSistemi
                     kayit.Parameters.AddWithValue("@bit_tarih", bit_tar);
                     kayit.Parameters.AddWithValue("@total_gun", top_gun);
                     //kayit.Parameters.AddWithValue("@kabul",0);
-                    kayit.Parameters.AddWithValue("@staj_konu", staj_konu);
+                    kayit.Parameters.AddWithValue("@staj_konusu", staj_konu);
                     kayit.Parameters.AddWithValue("@ogr_no", ogr_no);
 
                     kayit.ExecuteNonQuery();
@@ -89,7 +92,7 @@ namespace StajYonetimSistemi
                     kayit.Parameters.AddWithValue("@bit_tarih", bit_tar);
                     kayit.Parameters.AddWithValue("@total_gun", top_gun);
                     //kayit.Parameters.AddWithValue("@kabul",0);
-                    kayit.Parameters.AddWithValue("@staj_konu", staj_konu);
+                    kayit.Parameters.AddWithValue("@staj_konusu", staj_konu);
                     kayit.Parameters.AddWithValue("@ogr_no", ogr_no);
                     kayit.ExecuteNonQuery();
 
@@ -99,6 +102,13 @@ namespace StajYonetimSistemi
                 baglan.Close();
 
             }
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            TextBox6.Text = DropDownList1.SelectedValue;
+            Response.Redirect("staj_ekle.aspx");
         }
     }
 }
