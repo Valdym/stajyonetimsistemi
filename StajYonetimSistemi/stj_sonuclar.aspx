@@ -37,18 +37,28 @@
 </head>
 <body>
     <form id="form1" runat="server">
+      
+        
+        <div align ="center">
+        
         <div>
             <asp:DataList ID="DataList1" runat="server">
                 <ItemTemplate>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----------------------------------------<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("ogr_no") %>'></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <asp:Label ID="Label2" runat="server" Text='<%# Eval("kurumAdi") %>'></asp:Label> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("total_gun") %>'></asp:Label>
+                    kurumAdi:
+                    <asp:Label ID="kurumAdiLabel" runat="server" Text='<%# Eval("kurumAdi") %>'></asp:Label>
+                    <br />
+                    ogr_no:
+                    <asp:Label ID="ogr_noLabel" runat="server" Text='<%# Eval("ogr_no") %>' />
+                    <br />
+                    total_gun:
+                    <asp:Label ID="total_gunLabel" runat="server" Text='<%# Eval("total_gun") %>' />
+                    <br />
+                    <br /> 
                 </ItemTemplate>
             </asp:DataList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StajYönetimSistemiConnectionString %>" SelectCommand="SELECT [kurumAdi], [ogr_no], [total_gun] FROM [staj_tablo]"></asp:SqlDataSource>
         </div>
+            </div>
     </form>
 </body>
 </html>

@@ -24,6 +24,7 @@ namespace StajYonetimSistemi
         {
             //stajını tamamlayan ogrencileri listele...
             //group by - sum
+            Response.Redirect("biten_staj.aspx");
         }
     }
 }

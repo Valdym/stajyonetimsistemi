@@ -26,7 +26,7 @@ namespace StajYonetimSistemi
             ogrsad = TextBox3.Text;
             ogrsb = TextBox4.Text;
             ogrtur = TextBox5.Text;
-            SqlConnection baglan2 = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYonetimSistemi;Integrated Security=True ");
+            SqlConnection baglan2 = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYönetimSistemi;Integrated Security=True");
             baglan2.Open();
 
             SqlCommand kayit = new SqlCommand("insert into ogr_tablo(ogr_no,ad,soyad,sinif_bilgi,ogr_turu) values(@ogr_no,@ad,@soyad,@sinif_bilgi,@ogr_turu)", baglan2);

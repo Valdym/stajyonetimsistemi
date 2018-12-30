@@ -46,7 +46,7 @@ namespace StajYonetimSistemi
                 SqlConnection baglan = new SqlConnection("Data Source=ASUS\\SQLEXPRESS;Initial Catalog=StajYönetimSistemi;Integrated Security=True");
                 baglan.Open();
 
-                SqlCommand kayit = new SqlCommand("insert into staj_tablo(kurumAdi,sehir,bas_tarih,bit_tarih,total_gun,staj_konusu,ogr_no) values(@kurumAdi,@sehir,@bas_tarih,@bit_tarih,@total_gun,@staj_konusu,@ogr_no)", baglan);
+                SqlCommand kayit = new SqlCommand("insert into staj_tablo(kurumAdi,sehir,bas_tarih,bit_tarih,total_gun,staj_konu,ogr_no) values(@kurumAdi,@sehir,@bas_tarih,@bit_tarih,@total_gun,@staj_konu,@ogr_no)", baglan);
                 SqlCommand sinif = new SqlCommand("Select * From ogr_tablo where sinif_bilgi < 3 ", baglan);
                 SqlDataReader dr;
                 dr = sinif.ExecuteReader();
@@ -74,7 +74,7 @@ namespace StajYonetimSistemi
                     kayit.Parameters.AddWithValue("@bit_tarih", bit_tar);
                     kayit.Parameters.AddWithValue("@total_gun", top_gun);
                     //kayit.Parameters.AddWithValue("@kabul",0);
-                    kayit.Parameters.AddWithValue("@staj_konusu", staj_konu);
+                    kayit.Parameters.AddWithValue("@staj_konu", staj_konu);
                     kayit.Parameters.AddWithValue("@ogr_no", ogr_no);
 
                     kayit.ExecuteNonQuery();
@@ -92,7 +92,7 @@ namespace StajYonetimSistemi
                     kayit.Parameters.AddWithValue("@bit_tarih", bit_tar);
                     kayit.Parameters.AddWithValue("@total_gun", top_gun);
                     //kayit.Parameters.AddWithValue("@kabul",0);
-                    kayit.Parameters.AddWithValue("@staj_konusu", staj_konu);
+                    kayit.Parameters.AddWithValue("@staj_konu", staj_konu);
                     kayit.Parameters.AddWithValue("@ogr_no", ogr_no);
                     kayit.ExecuteNonQuery();
 

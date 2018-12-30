@@ -59,7 +59,7 @@ namespace StajYonetimSistemi
             kabul_edilen_gun = puanlar * Convert.ToDouble(top_gun) / 100;
 
 
-            SqlCommand stj = new SqlCommand("Update staj_tablo SET total_gun = @kbl WHERE staj_id =  '" + TextBox11.Text + "'", baglan);
+            SqlCommand stj = new SqlCommand("Update staj_tablo SET kabul_gun = @kbl WHERE staj_id =  '" + TextBox11.Text + "'", baglan);
             stj.Parameters.AddWithValue("@kbl", kabul_edilen_gun);
             kayit.Parameters.AddWithValue("@devam", devam);
             kayit.Parameters.AddWithValue("@caba", caba);

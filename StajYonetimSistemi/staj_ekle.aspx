@@ -87,7 +87,7 @@
         </p>
                </div>
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StajYönetimSistemiConnectionString %>" SelectCommand="SELECT [staj_konusu] FROM [staj_tablo]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StajYönetimSistemiConnectionString %>" SelectCommand="SELECT [staj_konu] FROM [staj_tablo]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

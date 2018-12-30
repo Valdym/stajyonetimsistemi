@@ -33,21 +33,67 @@
      </style>
 </head>
 <body>
-        <h1>Mülakat Sonuçları</h1>
-
     <form id="form1" runat="server">
+                      
+    <div class="container-login100" style="background-image: url('images/karadeniz.jpg');">  
+               <div class="wrap-login100 p-t-190 p-b-30">
+
+     <h1>Mülakat Sonuçları</h1>
+
+
+            
+        <div class="w3-panel w3-round-xxlarge ">
+
+              <div align="center">
+
+
+
+              </div>
+        <div class="w3-panel w3-padding-8">
+                   <div class="wrap-input100 validate-input m-b-10" >
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Staj sonuçlarını görmek için tıklayınız..."></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Staj sonuçlarını görmek için tıklayınız..." CssClass="w3-hover-text-amber"></asp:Label>
+            <asp:Button ID="Button1" runat="server" Height="26px" OnClick="Button1_Click" style="margin-left: 8px" Text="Listele" Width="225px"  CssClass="input100"/>
+           </div>
         </div>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+        </div>
+         <div class="w3-panel w3-padding-8">
+                    <div class="wrap-input100 validate-input m-b-10">
+            <asp:Label ID="Label2" runat="server" Text="Stajını tamamlayan öğrencileri görmek için tıklayınız..." CssClass="w3-hover-text-amber"></asp:Label>
+
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="margin-left: 7px" Text="Listele" Width="236px" CssClass="input100" />
+
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>            
+         </div>
+        <div align="center">
+        
         <p>
-            &nbsp;<asp:Button ID="Button1" runat="server" Height="26px" OnClick="Button1_Click" style="margin-left: 8px" Text="Listele" Width="225px" />
         </p>
         <p>
-            <asp:Label ID="Label2" runat="server" Text="Stajını tamamlayan öğrencileri görmek için tıklayınız..."></asp:Label>
         </p>
         <p>
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="margin-left: 7px" Text="Listele" Width="236px" />
         </p>
+        </div>
+       
+        </div>
     </form>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 </body>
 </html>
